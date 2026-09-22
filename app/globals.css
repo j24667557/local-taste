@@ -1,0 +1,3739 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: #F7F3EC;
+  color: #4A3526;
+  font-family:
+    Arial,
+    "Noto Sans KR",
+    sans-serif;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font-family: inherit;
+}
+
+button {
+  cursor: pointer;
+}
+
+main {
+  width: min(1180px, calc(100% - 48px));
+  margin: 0 auto;
+}
+
+/* ========================================
+   NAVIGATION
+======================================== */
+
+.top-nav {
+  height: 90px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #E7DED2;
+}
+
+.logo {
+  font-size: 25px;
+  font-weight: 900;
+  letter-spacing: -1px;
+  text-decoration: none;
+}
+
+.logo span,
+.home-footer h2 span {
+  color: #6B4F3A;
+}
+
+.main-nav {
+  display: flex;
+  align-items: center;
+  gap: 34px;
+  margin-left: 80px;
+}
+
+.main-nav a {
+  color: #806D5B;
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.main-nav a:hover {
+  color: #6B4F3A;
+}
+
+.auth-menu {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+}
+
+.auth-menu a,
+.auth-menu button {
+  border: 1px solid #E7DED2;
+  border-radius: 9px;
+  background: #FFFFFF;
+
+  padding: 9px 15px;
+
+  color: #6B4F3A;
+  font-size: 13px;
+  font-weight: 600;
+
+  text-decoration: none;
+}
+
+.auth-menu a:hover,
+.auth-menu button:hover {
+  border-color: #6B4F3A;
+  color: #6B4F3A;
+}
+
+.auth-menu .signup-button {
+  border-color: #6B4F3A;
+  background: #6B4F3A;
+  color: #FFFFFF;
+}
+
+.auth-menu .signup-button:hover {
+  background: #4A3526;
+  color: #FFFFFF;
+}
+
+.welcome-user {
+  margin-right: 5px;
+  color: #6B4F3A;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* ========================================
+   HERO
+======================================== */
+
+.hero-section {
+  min-height: 440px;
+
+  display: grid;
+  grid-template-columns: 390px 1fr;
+  gap: 80px;
+
+  align-items: center;
+
+  padding: 60px 0 80px;
+}
+
+/* 작은 오늘의 추천 카드 */
+
+.today-card {
+  position: relative;
+
+  min-height: 330px;
+
+  padding: 42px 36px;
+
+  border-radius: 28px;
+
+  background: #F3E9DE;
+
+  overflow: hidden;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.today-label {
+  margin: 0 0 18px;
+
+  color: #6B4F3A;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.today-card h1 {
+  margin: 0;
+
+  color: #4A3526;
+
+  font-size: 34px;
+  line-height: 1.32;
+
+  font-weight: 800;
+  letter-spacing: -1.5px;
+}
+
+.today-description {
+  margin: 22px 0 0;
+
+  color: #8C7766;
+
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.today-decoration {
+  position: absolute;
+
+  right: 22px;
+  bottom: 20px;
+
+  display: flex;
+  gap: 7px;
+
+  opacity: 0.75;
+}
+
+.today-decoration span {
+  width: 35px;
+  height: 35px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.70);
+
+  font-size: 16px;
+}
+
+/* 오른쪽 소개 */
+
+.hero-content {
+  padding-top: 5px;
+}
+
+.hero-eyebrow {
+  margin: 0 0 18px;
+
+  color: #6B4F3A;
+
+  font-size: 12px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.hero-content h2 {
+  margin: 0;
+
+  color: #4A3526;
+
+  font-size: 45px;
+  line-height: 1.22;
+
+  letter-spacing: -2px;
+}
+
+.hero-content h2 strong {
+  color: #6B4F3A;
+}
+
+.hero-description {
+  margin: 24px 0 0;
+
+  color: #8C7766;
+
+  font-size: 15px;
+  line-height: 1.8;
+}
+
+.hero-stats {
+  display: flex;
+  gap: 42px;
+
+  margin-top: 38px;
+}
+
+.hero-stats div {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.hero-stats strong {
+  color: #4A3526;
+
+  font-size: 18px;
+}
+
+.hero-stats span {
+  color: #A98F78;
+
+  font-size: 11px;
+}
+
+/* ========================================
+   SECTION COMMON
+======================================== */
+
+.finder-section,
+.recommended-result,
+.restaurants-section {
+  margin-bottom: 100px;
+}
+
+.section-heading {
+  margin-bottom: 28px;
+
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.section-heading p {
+  margin: 0 0 8px;
+
+  color: #6B4F3A;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.section-heading h2 {
+  margin: 0;
+
+  color: #4A3526;
+
+  font-size: 28px;
+  line-height: 1.35;
+
+  letter-spacing: -1px;
+}
+
+.section-heading span {
+  display: block;
+
+  margin-top: 8px;
+
+  color: #8C7766;
+
+  font-size: 13px;
+}
+
+/* ========================================
+   FINDER
+======================================== */
+
+.finder-box {
+  padding: 36px;
+
+  border: 1px solid #E7DED2;
+  border-radius: 24px;
+
+  background: #FFFFFF;
+
+  box-shadow:
+    0 15px 45px rgba(74, 53, 38, 0.05);
+}
+
+.finder-group {
+  padding-bottom: 28px;
+  margin-bottom: 28px;
+
+  border-bottom: 1px solid #E7DED2;
+}
+
+.finder-title {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 17px;
+}
+
+.finder-icon {
+  width: 38px;
+  height: 38px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 11px;
+
+  background: #F3E9DE;
+
+  font-size: 17px;
+}
+
+.finder-title div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.finder-title strong {
+  font-size: 15px;
+}
+
+.finder-title small {
+  color: #A98F78;
+  font-size: 11px;
+}
+
+.category-list,
+.situation-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.category-list button,
+.situation-list button {
+  min-width: 65px;
+
+  padding: 10px 17px;
+
+  border: 1px solid #E7DED2;
+  border-radius: 9px;
+
+  background: #FFFFFF;
+
+  color: #6B4F3A;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  transition: 0.2s ease;
+}
+
+.category-list button:hover,
+.situation-list button:hover {
+  border-color: #6B4F3A;
+  background: #F7F1E9;
+}
+
+.category-list button.selected,
+.situation-list button.selected {
+  border-color: #6B4F3A;
+
+  background: #6B4F3A;
+  color: #FFFFFF;
+
+  box-shadow:
+    0 6px 15px rgba(107, 79, 58, 0.18);
+}
+
+.recommend-button {
+  width: 100%;
+
+  padding: 17px 20px;
+
+  border: none;
+  border-radius: 12px;
+
+  background: #6B4F3A;
+
+  color: #FFFFFF;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  box-shadow:
+    0 9px 20px rgba(107, 79, 58, 0.20);
+
+  transition: 0.2s ease;
+}
+
+.recommend-button:hover {
+  background: #4A3526;
+
+  transform: translateY(-2px);
+}
+
+.recommend-button b {
+  font-size: 17px;
+}
+
+/* ========================================
+   RECOMMEND RESULT
+======================================== */
+
+.recommended-result {
+  padding: 38px;
+
+  border: 1px solid #E7DED2;
+  border-radius: 25px;
+
+  background: #F3E9DE;
+}
+
+.result-heading {
+  margin-bottom: 25px;
+}
+
+.loading-box {
+  min-height: 180px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 18px;
+
+  background: #FFFFFF;
+}
+
+.loading-icon {
+  font-size: 30px;
+  margin-bottom: 10px;
+}
+
+.loading-box p {
+  margin: 0;
+
+  color: #8C7766;
+
+  font-size: 13px;
+}
+
+.empty-result {
+  padding: 45px 20px;
+
+  border-radius: 18px;
+
+  background: #FFFFFF;
+
+  text-align: center;
+}
+
+.empty-result > div {
+  margin-bottom: 12px;
+  font-size: 32px;
+}
+
+.empty-result h3 {
+  margin: 0 0 9px;
+
+  font-size: 16px;
+}
+
+.empty-result p {
+  margin: 0;
+
+  color: #91817a;
+
+  font-size: 13px;
+}
+
+/* ========================================
+   RESTAURANT CARDS
+======================================== */
+
+.restaurant-grid {
+  display: grid;
+
+  grid-template-columns:
+    repeat(3, minmax(0, 1fr));
+
+  gap: 22px;
+}
+
+.restaurant-card {
+  display: block;
+
+  overflow: hidden;
+
+  padding: 0;
+
+  border: 1px solid #E7DED2;
+  border-radius: 20px;
+
+  background: #FFFFFF;
+
+  color: inherit;
+
+  text-decoration: none;
+
+  transition:
+    transform 0.22s ease,
+    box-shadow 0.22s ease;
+}
+
+.restaurant-card:hover {
+  transform: translateY(-5px);
+
+  box-shadow:
+    0 16px 35px rgba(74, 53, 38, 0.10);
+}
+
+.restaurant-image {
+  position: relative;
+
+  width: 100%;
+  height: 210px;
+
+  overflow: hidden;
+
+  background: #F3E9DE;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.restaurant-image img {
+  width: 100%;
+  height: 100%;
+
+  display: block;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+.restaurant-card:hover
+.restaurant-image img {
+  transform: scale(1.04);
+}
+
+.restaurant-image > span {
+  font-size: 55px;
+}
+
+.image-rating {
+  position: absolute;
+
+  right: 12px;
+  top: 12px;
+
+  padding: 7px 10px;
+
+  border-radius: 8px;
+
+  background: rgba(255, 255, 255, 0.94);
+
+  color: #6B4F3A;
+
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.restaurant-info {
+  padding: 20px 20px 21px;
+}
+
+.category-badge {
+  display: inline-block;
+
+  padding: 5px 8px;
+
+  border-radius: 6px;
+
+  background: #F3E9DE;
+
+  color: #4A3526;
+
+  font-size: 10px;
+  font-weight: 700;
+}
+
+.restaurant-info h3 {
+  margin: 11px 0 8px;
+
+  color: #4A3526;
+
+  font-size: 19px;
+  font-weight: 800;
+
+  letter-spacing: -0.5px;
+}
+
+.restaurant-address {
+  margin: 0;
+
+  color: #8C7766;
+
+  font-size: 12px;
+
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.restaurant-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 5px;
+
+  margin-top: 14px;
+}
+
+.restaurant-tags span {
+  padding: 5px 8px;
+
+  border-radius: 5px;
+
+  background: #F4EEE7;
+
+  color: #8C7766;
+
+  font-size: 10px;
+}
+
+/* ========================================
+   RESTAURANT SECTION
+======================================== */
+
+.restaurant-heading {
+  align-items: flex-end;
+}
+
+.view-all {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  color: #806D5B;
+
+  font-size: 12px;
+  font-weight: 700;
+
+  text-decoration: none;
+}
+
+.view-all:hover {
+  color: #6B4F3A;
+}
+
+.view-all b {
+  color: #6B4F3A;
+  font-size: 15px;
+}
+
+/* ========================================
+   FOOTER
+======================================== */
+
+.home-footer {
+  min-height: 180px;
+
+  margin-top: 30px;
+  padding: 42px 0;
+
+  border-top: 1px solid #E7DED2;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.home-footer h2 {
+  margin: 0 0 7px;
+
+  font-size: 22px;
+}
+
+.home-footer p {
+  margin: 0;
+
+  color: #8C7766;
+
+  font-size: 12px;
+}
+
+.footer-message {
+  display: flex;
+  flex-direction: column;
+
+  text-align: right;
+}
+
+.footer-message span {
+  color: #A98F78;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 2px;
+}
+
+.footer-message strong {
+  margin-top: 4px;
+
+  color: #6B4F3A;
+
+  font-size: 18px;
+
+  letter-spacing: 1px;
+}
+
+/* ========================================
+   RESPONSIVE
+======================================== */
+
+@media (max-width: 900px) {
+  .main-nav {
+    display: none;
+  }
+
+  .hero-section {
+    grid-template-columns: 1fr;
+    gap: 35px;
+  }
+
+  .today-card {
+    min-height: 280px;
+  }
+
+  .hero-content h2 {
+    font-size: 36px;
+  }
+
+  .restaurant-grid {
+    grid-template-columns:
+      repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 600px) {
+  main {
+    width: min(100% - 28px, 1180px);
+  }
+
+  .top-nav {
+    height: 75px;
+  }
+
+  .logo {
+    font-size: 21px;
+  }
+
+  .auth-menu .welcome-user {
+    display: none;
+  }
+
+  .auth-menu a,
+  .auth-menu button {
+    padding: 7px 10px;
+    font-size: 11px;
+  }
+
+  .hero-section {
+    padding: 35px 0 55px;
+  }
+
+  .today-card {
+    min-height: 260px;
+    padding: 32px 28px;
+  }
+
+  .today-card h1 {
+    font-size: 29px;
+  }
+
+  .hero-content h2 {
+    font-size: 31px;
+  }
+
+  .hero-description {
+    font-size: 13px;
+  }
+
+  .hero-stats {
+    gap: 25px;
+  }
+
+  .finder-box {
+    padding: 24px 18px;
+  }
+
+  .recommended-result {
+    padding: 22px 16px;
+  }
+
+  .restaurant-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .restaurant-image {
+    height: 220px;
+  }
+
+  .section-heading h2 {
+    font-size: 23px;
+  }
+
+  .section-heading {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .view-all {
+    align-self: flex-end;
+  }
+
+  .home-footer {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .footer-message {
+    text-align: left;
+  }
+}
+/* ========================================
+   RESTAURANT DETAIL
+======================================== */
+
+.detail-page {
+  padding-top: 35px;
+  padding-bottom: 100px;
+}
+
+.back-button {
+  border: none;
+  background: transparent;
+
+  padding: 0;
+  margin-bottom: 25px;
+
+  color: #8C7766;
+  font-size: 13px;
+}
+
+.back-button:hover {
+  color: #6B4F3A;
+}
+
+.restaurant-detail-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  overflow: hidden;
+
+  margin-bottom: 70px;
+
+  border: 1px solid #E7DED2;
+  border-radius: 25px;
+
+  background: #FFFFFF;
+
+  box-shadow:
+    0 15px 40px rgba(74, 53, 38, 0.06);
+}
+
+.detail-image {
+  min-height: 420px;
+
+  background: #F3E9DE;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+}
+
+.detail-image span {
+  font-size: 80px;
+}
+
+.detail-info {
+  padding: 55px 48px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detail-category {
+  width: fit-content;
+
+  padding: 6px 10px;
+
+  border-radius: 7px;
+
+  background: #F3E9DE;
+  color: #4A3526;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.detail-info h1 {
+  margin: 17px 0 13px;
+
+  font-size: 34px;
+  letter-spacing: -1px;
+}
+
+.detail-rating {
+  margin-bottom: 16px;
+
+  color: #4A3526;
+
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.detail-address {
+  margin: 0;
+
+  color: #8C7766;
+
+  font-size: 13px;
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+
+  gap: 6px;
+
+  margin-top: 20px;
+}
+
+.detail-tags span {
+  padding: 6px 9px;
+
+  border-radius: 6px;
+
+  background: #F4EEE7;
+
+  color: #8C7766;
+
+  font-size: 11px;
+}
+
+/* 북마크 */
+
+.bookmark-button {
+  width: 100%;
+
+  margin-top: 28px;
+  padding: 14px;
+
+  border: 1px solid #6B4F3A;
+  border-radius: 11px;
+
+  background: #FFFFFF;
+
+  color: #6B4F3A;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition: 0.2s ease;
+}
+
+.bookmark-button:hover {
+  background: #F3E9DE;
+}
+
+.bookmark-button.bookmarked {
+  background: #6B4F3A;
+  color: #FFFFFF;
+}
+
+.bookmark-button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* ========================================
+   REVIEWS
+======================================== */
+
+.review-section {
+  margin-top: 20px;
+}
+
+.review-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
+  margin-bottom: 25px;
+}
+
+.review-header p {
+  margin: 0 0 7px;
+
+  color: #6B4F3A;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.review-header h2 {
+  margin: 0;
+
+  font-size: 28px;
+  letter-spacing: -1px;
+}
+
+.review-header span {
+  display: block;
+
+  margin-top: 7px;
+
+  color: #8C7766;
+
+  font-size: 13px;
+}
+
+.write-review-button {
+  padding: 11px 17px;
+
+  border: 1px solid #6B4F3A;
+  border-radius: 9px;
+
+  background: #6B4F3A;
+  color: #FFFFFF;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.write-review-button:hover {
+  background: #4A3526;
+}
+
+/* 리뷰 작성 */
+
+.review-form {
+  margin-bottom: 25px;
+  padding: 28px;
+
+  border: 1px solid #E7DED2;
+  border-radius: 18px;
+
+  background: #FFFFFF;
+}
+
+.review-form h3 {
+  margin: 0 0 20px;
+
+  font-size: 17px;
+}
+
+.review-form-label {
+  margin: 0 0 8px;
+
+  color: #75655e;
+
+  font-size: 12px;
+}
+
+.star-select {
+  display: flex;
+  gap: 3px;
+
+  margin-bottom: 18px;
+}
+
+.star-select button {
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #D8CFC4;
+
+  font-size: 28px;
+}
+
+.star-select button.active {
+  color: #6B4F3A;
+}
+
+.review-form textarea {
+  width: 100%;
+
+  padding: 14px;
+
+  border: 1px solid #E7DED2;
+  border-radius: 10px;
+
+  background: #FBF8F3;
+
+  color: #4A3526;
+
+  font-size: 13px;
+
+  resize: vertical;
+
+  outline: none;
+}
+
+.review-form textarea:focus {
+  border-color: #6B4F3A;
+}
+
+.submit-review-button {
+  width: 100%;
+
+  margin-top: 12px;
+  padding: 13px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #6B4F3A;
+  color: #FFFFFF;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* 리뷰 목록 */
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+
+  gap: 12px;
+}
+
+.review-card {
+  padding: 22px;
+
+  border: 1px solid #E7DED2;
+  border-radius: 16px;
+
+  background: #FFFFFF;
+}
+
+.review-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.review-card-top > div {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+}
+
+.review-card-top strong {
+  font-size: 13px;
+}
+
+.review-stars {
+  color: #6B4F3A;
+
+  font-size: 13px;
+}
+
+.review-card-top small {
+  color: #A98F78;
+
+  font-size: 10px;
+}
+
+.review-content {
+  margin: 15px 0 0;
+
+  color: #6B4F3A;
+
+  font-size: 13px;
+  line-height: 1.7;
+}
+
+.receipt-badge {
+  display: inline-block !important;
+
+  margin-top: 12px !important;
+  padding: 5px 8px;
+
+  border-radius: 5px;
+
+  background: #F1F8F3;
+
+  color: #4E8A5A !important;
+
+  font-size: 10px !important;
+}
+
+.empty-review {
+  padding: 45px 20px;
+
+  border-radius: 16px;
+
+  background: #FFFFFF;
+
+  text-align: center;
+}
+
+.empty-review div {
+  font-size: 30px;
+}
+
+.empty-review h3 {
+  margin: 12px 0 7px;
+
+  font-size: 15px;
+}
+
+.empty-review p {
+  margin: 0;
+
+  color: #8C7766;
+
+  font-size: 12px;
+}
+
+/* ========================================
+   DETAIL MOBILE
+======================================== */
+
+@media (max-width: 700px) {
+  .restaurant-detail-card {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-image {
+    min-height: 280px;
+  }
+
+  .detail-info {
+    padding: 32px 25px;
+  }
+
+  .detail-info h1 {
+    font-size: 28px;
+  }
+
+  .review-header {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 18px;
+  }
+
+  .write-review-button {
+    width: 100%;
+  }
+}
+/* =========================
+   AUTH PAGE
+   로그인 / 회원가입
+========================= */
+
+.auth-page {
+  min-height: calc(100vh - 80px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  box-sizing: border-box;
+}
+
+.auth-card {
+  width: 100%;
+  max-width: 440px;
+  padding: 42px 40px;
+  background: #FFFFFF;
+  border: 1px solid #E7DED2;
+  border-radius: 24px;
+  box-shadow: 0 15px 45px rgba(74, 53, 38, 0.08);
+  box-sizing: border-box;
+}
+
+.auth-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.auth-header p {
+  margin: 0 0 12px;
+  color: #4A3526;
+  font-size: 13px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.auth-header h1 {
+  margin: 0 0 10px;
+  color: #4A3526;
+  font-size: 32px;
+  font-weight: 800;
+}
+
+.auth-header span {
+  color: #888;
+  font-size: 14px;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  color: #4A3526;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.auth-form input {
+  width: 100%;
+  height: 50px;
+  padding: 0 15px;
+  border: 1px solid #D8CFC4;
+  border-radius: 11px;
+  background: #FCFAF7;
+  color: #4A3526;
+  font-size: 14px;
+  outline: none;
+  box-sizing: border-box;
+  transition: 0.2s ease;
+}
+
+.auth-form input::placeholder {
+  color: #A98F78;
+}
+
+.auth-form input:focus {
+  border-color: #4A3526;
+  background: #FFFFFF;
+  box-shadow: 0 0 0 3px rgba(74, 53, 38, 0.10);
+}
+
+.auth-form button {
+  width: 100%;
+  height: 52px;
+  margin-top: 6px;
+  border: none;
+  border-radius: 12px;
+  background: #4A3526;
+  color: white;
+  font-size: 15px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.auth-form button:hover {
+  background: #4A3526;
+  transform: translateY(-1px);
+}
+
+.auth-form button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.auth-error {
+  margin: -4px 0 0;
+  color: #A84A3A;
+  font-size: 13px;
+  line-height: 1.5;
+}
+
+.auth-footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 7px;
+  margin-top: 24px;
+  padding-top: 22px;
+  border-top: 1px solid #E7DED2;
+  color: #888;
+  font-size: 13px;
+}
+
+.auth-footer a {
+  color: #4A3526;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.auth-footer a:hover {
+  text-decoration: underline;
+}
+
+.auth-home-link {
+  display: block;
+  margin-top: 22px;
+  text-align: center;
+  color: #8C7766;
+  font-size: 13px;
+  text-decoration: none;
+}
+
+.auth-home-link:hover {
+  color: #4A3526;
+}
+
+
+/* 모바일 */
+@media (max-width: 600px) {
+  .auth-page {
+    padding: 30px 16px;
+  }
+
+  .auth-card {
+    padding: 34px 24px;
+    border-radius: 20px;
+  }
+
+  .auth-header h1 {
+    font-size: 28px;
+  }
+}
+/* =========================
+   RESTAURANT DETAIL
+========================= */
+
+.restaurant-detail-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 40px 20px 100px;
+}
+
+.detail-back {
+  margin-bottom: 24px;
+}
+
+.detail-back a {
+  color: #888;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.detail-back a:hover {
+  color: #4A3526;
+}
+
+.restaurant-detail-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  overflow: hidden;
+  background: #FFFFFF;
+  border: 1px solid #E7DED2;
+  border-radius: 24px;
+  box-shadow: 0 12px 35px rgba(74, 53, 38, 0.06);
+}
+
+.detail-image {
+  min-height: 390px;
+  background: #F3E9DE;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.detail-image img {
+  width: 100%;
+  height: 100%;
+  min-height: 390px;
+  object-fit: cover;
+  display: block;
+}
+
+.detail-image span {
+  font-size: 80px;
+}
+
+.detail-info {
+  padding: 50px 45px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.detail-category {
+  display: inline-block;
+  width: fit-content;
+  margin-bottom: 14px;
+  padding: 7px 12px;
+  border-radius: 7px;
+  background: #F3E9DE;
+  color: #4A3526;
+  font-size: 12px;
+  font-weight: 800;
+}
+
+.detail-info h1 {
+  margin: 0 0 18px;
+  color: #4A3526;
+  font-size: 38px;
+  line-height: 1.2;
+}
+
+.detail-rating {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 18px;
+}
+
+.detail-rating strong {
+  color: #4A3526;
+  font-size: 20px;
+}
+
+.detail-rating span {
+  color: #8C7766;
+  font-size: 13px;
+}
+
+.detail-address {
+  margin: 0 0 22px;
+  color: #8C7766;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.detail-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 7px;
+}
+
+.detail-tags span {
+  padding: 7px 10px;
+  border-radius: 7px;
+  background: #F5EEE6;
+  color: #4A3526;
+  font-size: 12px;
+}
+
+.restaurant-map-section,
+.review-section {
+  margin-top: 55px;
+}
+
+.detail-section-header {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.detail-section-header p {
+  margin: 0 0 7px;
+  color: #4A3526;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.detail-section-header h2 {
+  margin: 0;
+  color: #4A3526;
+  font-size: 26px;
+}
+
+.restaurant-map-section > div:last-child {
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.map-empty {
+  height: 360px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #F5EEE6;
+  border-radius: 18px;
+  color: #8C7766;
+}
+
+.review-write-button {
+  padding: 11px 17px;
+  border-radius: 10px;
+  background: #4A3526;
+  color: white;
+  text-decoration: none;
+  font-size: 13px;
+  font-weight: 700;
+  transition: 0.2s ease;
+}
+
+.review-write-button:hover {
+  background: #4A3526;
+  transform: translateY(-1px);
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.review-card {
+  padding: 25px;
+  background: #FFFFFF;
+  border: 1px solid #E7DED2;
+  border-radius: 18px;
+}
+
+.review-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.review-user {
+  display: flex;
+  align-items: center;
+  gap: 11px;
+}
+
+.review-avatar {
+  width: 38px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background: #F3E9DE;
+}
+
+.review-user strong {
+  display: block;
+  margin-bottom: 3px;
+  color: #4A3526;
+  font-size: 14px;
+}
+
+.review-user small {
+  color: #A98F78;
+  font-size: 11px;
+}
+
+.review-rating {
+  font-size: 13px;
+  white-space: nowrap;
+}
+
+.review-content {
+  margin: 20px 0 13px;
+  color: #6B4F3A;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+.receipt-badge {
+  display: inline-block;
+  padding: 5px 9px;
+  border-radius: 6px;
+  background: #F1F8F3;
+  color: #4E8A5A;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.review-empty {
+  padding: 55px 20px;
+  text-align: center;
+  background: #FFFFFF;
+  border: 1px solid #E7DED2;
+  border-radius: 18px;
+}
+
+.review-empty > div {
+  margin-bottom: 10px;
+  font-size: 35px;
+}
+
+.review-empty h3 {
+  margin: 0 0 8px;
+  color: #4A3526;
+  font-size: 17px;
+}
+
+.review-empty p {
+  margin: 0;
+  color: #8C7766;
+  font-size: 13px;
+}
+
+.detail-loading,
+.detail-error {
+  max-width: 700px;
+  margin: 100px auto;
+  padding: 50px 20px;
+  text-align: center;
+}
+
+.detail-error h1 {
+  color: #4A3526;
+}
+
+.detail-error p {
+  margin-bottom: 25px;
+  color: #888;
+}
+
+.detail-error a {
+  color: #4A3526;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+
+/* 모바일 */
+@media (max-width: 700px) {
+  .restaurant-detail-page {
+    padding: 25px 16px 70px;
+  }
+
+  .restaurant-detail-hero {
+    grid-template-columns: 1fr;
+  }
+
+  .detail-image,
+  .detail-image img {
+    min-height: 260px;
+    height: 260px;
+  }
+
+  .detail-info {
+    padding: 30px 25px;
+  }
+
+  .detail-info h1 {
+    font-size: 30px;
+  }
+
+  .detail-section-header {
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .detail-section-header h2 {
+    font-size: 23px;
+  }
+
+  .review-top {
+    align-items: flex-start;
+  }
+
+  .review-rating {
+    font-size: 11px;
+  }
+}
+/* =========================
+   REVIEW WRITE FORM
+========================= */
+
+.review-form-card {
+  margin-bottom: 32px;
+  padding: 32px;
+  background: #FBF8F3;
+  border: 1px solid #E7DED2;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(74, 53, 38, 0.06);
+}
+
+.review-form-header {
+  margin-bottom: 26px;
+}
+
+.review-form-header p {
+  margin: 0 0 7px;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.16em;
+  color: #A98F78;
+}
+
+.review-form-header h3 {
+  margin: 0;
+  font-size: 21px;
+  color: #4A3526;
+}
+
+.review-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.review-form-field {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.review-form-field label {
+  font-size: 14px;
+  font-weight: 800;
+  color: #4A3526;
+}
+
+.star-selector {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.star {
+  border: none;
+  background: transparent;
+  padding: 0;
+  font-size: 30px;
+  color: #D8CFC4;
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.star:hover {
+  transform: scale(1.08);
+}
+
+.star.active {
+  color: #C49A6C;
+}
+
+.star-selector span {
+  margin-left: 8px;
+  font-size: 14px;
+  font-weight: 800;
+  color: #6B4F3A;
+}
+
+.review-form-field textarea {
+  width: 100%;
+  min-height: 150px;
+  resize: vertical;
+  box-sizing: border-box;
+  padding: 16px;
+  border: 1px solid #E7DED2;
+  border-radius: 14px;
+  background: white;
+  color: #4A3526;
+  font-family: inherit;
+  font-size: 14px;
+  line-height: 1.7;
+  outline: none;
+  transition: border 0.2s ease;
+}
+
+.review-form-field textarea:focus {
+  border-color: #A98F78;
+}
+
+.review-form-field small {
+  align-self: flex-end;
+  margin-top: -5px;
+  color: #A98F78;
+  font-size: 12px;
+}
+
+.receipt-check {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: fit-content;
+  padding: 13px 16px;
+  border-radius: 12px;
+  background: #FFFFFF;
+  border: 1px solid #E7DED2;
+  cursor: pointer;
+}
+
+.receipt-check input {
+  width: 16px;
+  height: 16px;
+  accent-color: #A98F78;
+}
+
+.receipt-check span {
+  font-size: 13px;
+  font-weight: 700;
+  color: #6B4F3A;
+}
+
+.review-submit-error {
+  margin: -8px 0 0;
+  color: #8A5A44;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.review-submit-button {
+  width: 100%;
+  border: none;
+  border-radius: 13px;
+  padding: 15px;
+  background: #4A3526;
+  color: white;
+  font-size: 14px;
+  font-weight: 800;
+  cursor: pointer;
+  transition: 0.2s ease;
+}
+
+.review-submit-button:hover {
+  background: #4A3526;
+}
+
+.review-submit-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+
+/* =========================
+   MOBILE REVIEW FORM
+========================= */
+
+@media (max-width: 700px) {
+  .review-form-card {
+    padding: 22px;
+    border-radius: 18px;
+  }
+
+  .review-form-header h3 {
+    font-size: 18px;
+  }
+
+  .star {
+    font-size: 27px;
+  }
+}
+.review-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.review-delete-button {
+  border: none;
+  background: transparent;
+  color: #A98F78;
+  font-size: 12px;
+  font-weight: 700;
+  cursor: pointer;
+  padding: 5px 0;
+}
+
+.review-delete-button:hover {
+  color: #8A5A44;
+}
+/* =========================
+   Global Header
+========================= */
+
+.global-header {
+  width: 100%;
+  height: 72px;
+  background: #FFFFFF;
+  border-bottom: 1px solid #E7DED2;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.global-header-inner {
+  width: min(1200px, calc(100% - 40px));
+  height: 100%;
+  margin: 0 auto;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.global-logo {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+
+  color: #4A3526;
+  text-decoration: none;
+
+  font-size: 22px;
+  font-weight: 800;
+  letter-spacing: -0.5px;
+}
+
+.global-logo-icon {
+  font-size: 25px;
+}
+
+.global-nav {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+.global-nav a {
+  color: #6B4F3A;
+  text-decoration: none;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.global-nav a:hover {
+  color: #4A3526;
+  transform: translateY(-1px);
+}
+
+.global-nav .global-login {
+  padding: 10px 18px;
+
+  color: #FFFFFF;
+  background: #4A3526;
+
+  border-radius: 8px;
+}
+
+.global-nav .global-login:hover {
+  color: #FFFFFF;
+  background: #6B4F3A;
+}
+
+
+/* 모바일 */
+
+@media (max-width: 700px) {
+  .global-header {
+    height: 64px;
+  }
+
+  .global-header-inner {
+    width: calc(100% - 24px);
+  }
+
+  .global-logo {
+    font-size: 18px;
+  }
+
+  .global-logo-icon {
+    font-size: 21px;
+  }
+
+  .global-nav {
+    gap: 12px;
+  }
+
+  .global-nav a {
+    font-size: 13px;
+  }
+
+  .global-nav .global-login {
+    padding: 8px 12px;
+  }
+}
+/* =========================
+   My Page
+========================= */
+
+.mypage {
+  min-height: calc(100vh - 72px);
+  background: #F7F3EC;
+  padding: 70px 20px 100px;
+}
+
+.mypage-container {
+  width: min(1000px, 100%);
+  margin: 0 auto;
+}
+
+/* Header */
+
+.mypage-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 55px;
+}
+
+.mypage-header > div:first-child p {
+  margin: 0 0 12px;
+
+  color: #8C7766;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 2px;
+}
+
+.mypage-header h1 {
+  margin: 0;
+
+  color: #4A3526;
+  font-size: 38px;
+  line-height: 1.25;
+  letter-spacing: -1.5px;
+}
+
+.mypage-profile-icon {
+  width: 86px;
+  height: 86px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: #4A3526;
+  border-radius: 28px;
+
+  font-size: 38px;
+}
+
+/* Section */
+
+.mypage-section {
+  margin-bottom: 42px;
+}
+
+.mypage-section-title {
+  margin-bottom: 18px;
+}
+
+.mypage-section-title p {
+  margin: 0 0 5px;
+
+  color: #8C7766;
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+}
+
+.mypage-section-title h2 {
+  margin: 0;
+
+  color: #4A3526;
+  font-size: 23px;
+  letter-spacing: -0.8px;
+}
+
+/* Information */
+
+.mypage-info-card {
+  overflow: hidden;
+
+  background: #FFFFFF;
+  border: 1px solid #E7DED2;
+  border-radius: 20px;
+
+  box-shadow: 0 8px 30px rgba(74, 53, 38, 0.04);
+}
+
+.mypage-info-row {
+  min-height: 78px;
+  padding: 0 28px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.mypage-info-row:last-child {
+  border-bottom: none;
+}
+
+.mypage-info-row span {
+  color: #8C7766;
+  font-size: 14px;
+}
+
+.mypage-info-row strong {
+  color: #4A3526;
+  font-size: 15px;
+}
+
+/* Taste Card */
+
+.mypage-taste-card {
+  position: relative;
+
+  min-height: 250px;
+  padding: 35px;
+
+  background: #FFFFFF;
+  border: 1px solid #E7DED2;
+  border-radius: 24px;
+
+  box-shadow: 0 8px 30px rgba(74, 53, 38, 0.04);
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+/* Empty Taste */
+
+.mypage-taste-icon {
+  width: 62px;
+  height: 62px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  background: #F1EBE3;
+  border-radius: 18px;
+
+  font-size: 28px;
+}
+
+.mypage-taste-card h3 {
+  margin: 0 0 9px;
+
+  color: #4A3526;
+  font-size: 20px;
+  letter-spacing: -0.7px;
+}
+
+.mypage-taste-card > p {
+  margin: 0;
+
+  color: #888888;
+  font-size: 14px;
+  line-height: 1.7;
+}
+
+/* Taste Tags */
+
+.mypage-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+
+  margin: 10px 0 25px;
+}
+
+.mypage-tags span {
+  padding: 10px 15px;
+
+  background: #F1EBE3;
+  border-radius: 12px;
+
+  color: #6B4F3A;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* Taste Button */
+
+.mypage-taste-button {
+  margin-top: 24px;
+
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #4A3526;
+  color: #FFFFFF;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease;
+}
+
+.mypage-taste-button:hover {
+  background: #6B4F3A;
+  transform: translateY(-2px);
+}
+
+/* =========================
+   Taste Setting
+========================= */
+
+.taste-setting-header {
+  width: 100%;
+  margin-bottom: 28px;
+}
+
+.taste-setting-header h3 {
+  margin: 0 0 8px;
+
+  color: #4A3526;
+  font-size: 22px;
+  letter-spacing: -0.8px;
+}
+
+.taste-setting-header p {
+  margin: 0;
+
+  color: #8C7766;
+  font-size: 14px;
+}
+
+/* 옵션을 카드처럼 */
+
+.taste-options {
+  width: 100%;
+
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 12px;
+
+  margin-bottom: 30px;
+}
+
+.taste-option {
+  min-height: 58px;
+
+  border: 1px solid #E7DED2;
+  border-radius: 15px;
+
+  background: #fafafa;
+  color: #6B4F3A;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition:
+    0.2s ease;
+}
+
+.taste-option:hover {
+  border-color: #4A3526;
+  background: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.taste-option.selected {
+  border-color: #4A3526;
+  background: #4A3526;
+  color: #FFFFFF;
+
+  box-shadow: 0 7px 18px
+    rgba(74, 53, 38, 0.12);
+}
+
+/* 저장 버튼 영역 */
+
+.taste-setting-actions {
+  width: 100%;
+
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+
+  padding-top: 20px;
+
+  border-top: 1px solid #E7DED2;
+}
+
+.taste-cancel-button,
+.taste-save-button {
+  min-width: 100px;
+  height: 44px;
+
+  border-radius: 10px;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.taste-cancel-button {
+  border: 1px solid #D8CFC4;
+  background: #FFFFFF;
+  color: #6B4F3A;
+}
+
+.taste-save-button {
+  border: none;
+  background: #4A3526;
+  color: #FFFFFF;
+}
+
+.taste-save-button:hover {
+  background: #6B4F3A;
+}
+
+.taste-save-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.taste-save-message {
+  width: 100%;
+  margin: 18px 0 0;
+
+  color: #4E8A5A;
+  font-size: 13px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* =========================
+   Reviews
+========================= */
+
+.mypage-empty-reviews {
+  min-height: 230px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  background: #FFFFFF;
+  border: 1px solid #E7DED2;
+  border-radius: 24px;
+
+  text-align: center;
+
+  box-shadow: 0 8px 30px rgba(74, 53, 38, 0.04);
+}
+
+.mypage-empty-reviews > div {
+  width: 60px;
+  height: 60px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 15px;
+
+  background: #F1EBE3;
+  border-radius: 18px;
+
+  font-size: 27px;
+}
+
+.mypage-empty-reviews h3 {
+  margin: 0 0 8px;
+
+  color: #4A3526;
+  font-size: 18px;
+}
+
+.mypage-empty-reviews p {
+  margin: 0;
+
+  color: #8C7766;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+/* =========================
+   Login Required
+========================= */
+
+.mypage-login-required {
+  min-height: 500px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+
+  text-align: center;
+}
+
+.mypage-icon {
+  width: 75px;
+  height: 75px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  margin-bottom: 20px;
+
+  background: #4A3526;
+  border-radius: 24px;
+
+  font-size: 32px;
+}
+
+.mypage-login-required h1 {
+  margin: 0 0 10px;
+
+  font-size: 26px;
+  color: #4A3526;
+}
+
+.mypage-login-required p {
+  margin: 0 0 25px;
+
+  color: #888888;
+}
+
+.mypage-login-button {
+  padding: 13px 25px;
+
+  border-radius: 10px;
+
+  background: #4A3526;
+  color: #FFFFFF;
+
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =========================
+   Mobile
+========================= */
+
+@media (max-width: 700px) {
+  .mypage {
+    padding: 45px 16px 70px;
+  }
+
+  .mypage-header {
+    margin-bottom: 40px;
+  }
+
+  .mypage-header h1 {
+    font-size: 30px;
+  }
+
+  .mypage-profile-icon {
+    width: 65px;
+    height: 65px;
+    border-radius: 20px;
+    font-size: 28px;
+  }
+
+  .mypage-taste-card {
+    padding: 25px;
+  }
+
+  .taste-options {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .taste-option {
+    min-height: 52px;
+  }
+
+  .mypage-info-row {
+    padding: 0 20px;
+  }
+}
+/* =========================
+   My Review Cards
+========================= */
+
+.mypage-review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.mypage-review-card {
+  position: relative;
+
+  display: flex;
+  align-items: stretch;
+
+  min-height: 190px;
+
+  background: #FFFFFF;
+  border: 1px solid #E7DED2;
+  border-radius: 22px;
+
+  overflow: hidden;
+
+  text-decoration: none;
+  color: inherit;
+
+  box-shadow: 0 8px 30px rgba(74, 53, 38, 0.04);
+
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.mypage-review-card:hover {
+  transform: translateY(-3px);
+
+  box-shadow: 0 14px 35px
+    rgba(74, 53, 38, 0.08);
+}
+
+.mypage-review-image {
+  width: 210px;
+  min-width: 210px;
+
+  background: #F1EBE3;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+}
+
+.mypage-review-image img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: transform 0.3s ease;
+}
+
+.mypage-review-card:hover
+  .mypage-review-image img {
+  transform: scale(1.04);
+}
+
+.mypage-review-image span {
+  font-size: 40px;
+}
+
+.mypage-review-content {
+  flex: 1;
+
+  padding: 25px 55px 25px 25px;
+}
+
+.mypage-review-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+
+  gap: 20px;
+}
+
+.mypage-review-category {
+  display: inline-block;
+
+  margin-bottom: 7px;
+  padding: 5px 9px;
+
+  background: #F1EBE3;
+  border-radius: 7px;
+
+  color: #8C7766;
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.mypage-review-top h3 {
+  margin: 0;
+
+  color: #4A3526;
+  font-size: 19px;
+  letter-spacing: -0.5px;
+}
+
+.mypage-review-date {
+  flex-shrink: 0;
+
+  color: #A98F78;
+  font-size: 12px;
+}
+
+.mypage-review-rating {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+
+  margin: 14px 0 10px;
+}
+
+.mypage-review-rating span {
+  color: #4A3526;
+  font-size: 15px;
+  letter-spacing: 1px;
+}
+
+.mypage-review-rating strong {
+  color: #6B4F3A;
+  font-size: 13px;
+}
+
+.mypage-review-text {
+  margin: 0;
+
+  color: #6B4F3A;
+  font-size: 14px;
+  line-height: 1.65;
+
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.mypage-receipt-badge {
+  display: inline-block;
+
+  margin-top: 13px;
+  padding: 6px 9px;
+
+  border-radius: 7px;
+
+  background: #F1F8F3;
+  color: #4E8A5A;
+
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.mypage-review-arrow {
+  position: absolute;
+
+  right: 22px;
+  top: 50%;
+
+  transform: translateY(-50%);
+
+  color: #A98F78;
+  font-size: 22px;
+
+  transition:
+    color 0.2s ease,
+    transform 0.2s ease;
+}
+
+.mypage-review-card:hover
+  .mypage-review-arrow {
+  color: #4A3526;
+
+  transform:
+    translateY(-50%)
+    translateX(3px);
+}
+
+/* 리뷰가 없을 때 버튼 */
+
+.mypage-review-button {
+  margin-top: 20px;
+
+  padding: 11px 18px;
+
+  border-radius: 10px;
+
+  background: #4A3526;
+  color: #FFFFFF;
+
+  text-decoration: none;
+
+  font-size: 13px;
+  font-weight: 700;
+}
+
+/* 로딩 */
+
+.mypage-loading {
+  min-height: 500px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #888888;
+}
+
+/* 모바일 */
+
+@media (max-width: 700px) {
+  .mypage-review-card {
+    min-height: 150px;
+  }
+
+  .mypage-review-image {
+    width: 120px;
+    min-width: 120px;
+  }
+
+  .mypage-review-content {
+    padding: 18px 38px 18px 18px;
+  }
+
+  .mypage-review-top h3 {
+    font-size: 16px;
+  }
+
+  .mypage-review-date {
+    display: none;
+  }
+
+  .mypage-review-text {
+    font-size: 13px;
+  }
+
+  .mypage-review-arrow {
+    right: 12px;
+  }
+}
+/* =========================
+   My Review Actions
+========================= */
+
+.mypage-review-card {
+  position: relative;
+}
+
+.mypage-review-main {
+  flex: 1;
+
+  display: flex;
+
+  color: inherit;
+  text-decoration: none;
+
+  min-width: 0;
+}
+
+.mypage-review-actions {
+  position: absolute;
+
+  right: 22px;
+  bottom: 18px;
+
+  display: flex;
+  gap: 7px;
+
+  z-index: 2;
+}
+
+.mypage-review-actions button {
+  padding: 7px 10px;
+
+  border: 1px solid #E7DED2;
+  border-radius: 8px;
+
+  background: #FFFFFF;
+  color: #8C7766;
+
+  font-size: 11px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: 0.2s;
+}
+
+.mypage-review-actions button:hover {
+  border-color: #4A3526;
+  color: #4A3526;
+}
+
+.mypage-review-actions button:last-child:hover {
+  border-color: #A84A3A;
+  color: #A84A3A;
+}
+
+/* =========================
+   Review Edit Modal
+========================= */
+
+.review-edit-overlay {
+  position: fixed;
+
+  inset: 0;
+
+  z-index: 2000;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 20px;
+
+  background: rgba(74, 53, 38, 0.55);
+}
+
+.review-edit-modal {
+  width: min(520px, 100%);
+
+  max-height: 90vh;
+
+  overflow-y: auto;
+
+  padding: 30px;
+
+  background: #FFFFFF;
+
+  border-radius: 24px;
+
+  box-shadow:
+    0 25px 70px
+    rgba(74, 53, 38, 0.20);
+}
+
+.review-edit-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  margin-bottom: 28px;
+}
+
+.review-edit-header p {
+  margin: 0 0 6px;
+
+  color: #8C7766;
+
+  font-size: 10px;
+  font-weight: 800;
+
+  letter-spacing: 1.5px;
+}
+
+.review-edit-header h2 {
+  margin: 0;
+
+  color: #4A3526;
+
+  font-size: 22px;
+
+  letter-spacing: -0.7px;
+}
+
+.review-edit-close {
+  width: 36px;
+  height: 36px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #F3EEE8;
+  color: #6B4F3A;
+
+  font-size: 24px;
+
+  cursor: pointer;
+}
+
+.review-edit-field {
+  margin-bottom: 22px;
+}
+
+.review-edit-field label {
+  display: block;
+
+  margin-bottom: 10px;
+
+  color: #6B4F3A;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.review-edit-stars {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.review-edit-stars button {
+  padding: 0;
+
+  border: none;
+  background: transparent;
+
+  color: #D8CFC4;
+
+  font-size: 29px;
+
+  cursor: pointer;
+}
+
+.review-edit-stars button.active {
+  color: #4A3526;
+}
+
+.review-edit-stars span {
+  margin-left: 8px;
+
+  color: #6B4F3A;
+
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.review-edit-field textarea {
+  width: 100%;
+  min-height: 150px;
+
+  padding: 15px;
+
+  box-sizing: border-box;
+
+  resize: vertical;
+
+  border: 1px solid #D8CFC4;
+  border-radius: 12px;
+
+  background: #fafafa;
+
+  color: #4A3526;
+
+  font-family: inherit;
+  font-size: 14px;
+
+  line-height: 1.6;
+
+  outline: none;
+}
+
+.review-edit-field textarea:focus {
+  border-color: #4A3526;
+  background: #FFFFFF;
+}
+
+.review-edit-field small {
+  display: block;
+
+  margin-top: 6px;
+
+  color: #8C7766;
+
+  text-align: right;
+
+  font-size: 11px;
+}
+
+.review-edit-receipt {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin-bottom: 22px;
+
+  color: #6B4F3A;
+
+  font-size: 13px;
+  cursor: pointer;
+}
+
+.review-edit-receipt input {
+  width: 16px;
+  height: 16px;
+}
+
+.review-edit-save {
+  width: 100%;
+  height: 48px;
+
+  border: none;
+  border-radius: 11px;
+
+  background: #4A3526;
+  color: #FFFFFF;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  cursor: pointer;
+}
+
+.review-edit-save:hover {
+  background: #6B4F3A;
+}
+
+.review-edit-save:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+/* 모바일 */
+
+@media (max-width: 700px) {
+  .mypage-review-main {
+    display: block;
+  }
+
+  .mypage-review-image {
+    width: 100%;
+    height: 160px;
+  }
+
+  .mypage-review-content {
+    padding-bottom: 65px;
+  }
+
+  .mypage-review-actions {
+    right: 18px;
+    bottom: 15px;
+  }
+
+  .review-edit-modal {
+    padding: 23px;
+    border-radius: 20px;
+  }
+}
+/* =========================
+   맛집 상세 찜 버튼
+========================= */
+
+.restaurant-title-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+}
+
+.restaurant-title-row h1 {
+  margin: 0;
+  min-width: 0;
+}
+
+/* 작은 원형 하트 버튼 */
+.bookmark-button {
+  flex-shrink: 0;
+
+  width: 38px;
+  height: 38px;
+
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #E7DED2;
+  border-radius: 50%;
+
+  background: #FFFFFF;
+  color: #4A3526;
+
+  font-size: 18px;
+  cursor: pointer;
+
+  box-shadow:
+    0 4px 12px rgba(74, 53, 38, 0.06);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+.bookmark-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+
+  border-color: #4A3526;
+
+  box-shadow:
+    0 7px 18px rgba(74, 53, 38, 0.10);
+}
+
+.bookmark-button:active:not(:disabled) {
+  transform: scale(0.92);
+}
+
+.bookmark-button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.bookmark-heart {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  font-size: 18px;
+  line-height: 1;
+}
+
+/* 찜한 상태 */
+.bookmark-button.bookmarked {
+  background: #4A3526;
+  border-color: #4A3526;
+  color: #FFFFFF;
+
+  box-shadow:
+    0 6px 16px rgba(74, 53, 38, 0.15);
+}
+
+.bookmark-button.bookmarked:hover:not(:disabled) {
+  background: #6B4F3A;
+  border-color: #6B4F3A;
+}
+
+
+/* 모바일 */
+@media (max-width: 700px) {
+  .restaurant-title-row {
+    gap: 10px;
+  }
+
+  .bookmark-button {
+    width: 34px;
+    height: 34px;
+  }
+
+  .bookmark-heart {
+    font-size: 16px;
+  }
+}
+.restaurant-title-row {
+  position: relative;
+}
+
+.restaurant-title-row h1 {
+  margin: 0;
+  padding-right: 50px;
+}
+
+/* 오른쪽 위 작은 하트 */
+.bookmark-button {
+  position: absolute;
+  top: -42px;
+  right: 0;
+
+  width: 36px;
+  height: 36px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0;
+
+  border: 1px solid #E7DED2;
+  border-radius: 50%;
+
+  background: #FFFFFF;
+  color: #4A3526;
+
+  font-size: 17px;
+  cursor: pointer;
+
+  box-shadow: 0 4px 12px rgba(74, 53, 38, 0.07);
+
+  transition:
+    transform 0.2s ease,
+    background 0.2s ease,
+    color 0.2s ease,
+    border-color 0.2s ease;
+}
+
+.bookmark-button:hover:not(:disabled) {
+  transform: translateY(-2px);
+  border-color: #4A3526;
+}
+
+.bookmark-button:active:not(:disabled) {
+  transform: scale(0.92);
+}
+
+.bookmark-button:disabled {
+  cursor: wait;
+  opacity: 0.6;
+}
+
+.bookmark-heart {
+  font-size: 17px;
+  line-height: 1;
+}
+
+/* 찜 완료 */
+.bookmark-button.bookmarked {
+  background: #4A3526;
+  border-color: #4A3526;
+  color: #FFFFFF;
+}
+
+.bookmark-button.bookmarked:hover:not(:disabled) {
+  background: #6B4F3A;
+  border-color: #6B4F3A;
+}
+
+@media (max-width: 700px) {
+  .bookmark-button {
+    width: 34px;
+    height: 34px;
+    top: -40px;
+  }
+
+  .bookmark-heart {
+    font-size: 16px;
+  }
+}
+/* =========================
+   MY PROFILE
+========================= */
+
+.profile-page {
+  min-height: calc(100vh - 72px);
+  padding: 60px 20px 100px;
+  background: #F7F3EC;
+}
+
+.profile-container {
+  width: min(760px, 100%);
+  margin: 0 auto;
+}
+
+.profile-back {
+  margin-bottom: 28px;
+}
+
+.profile-back a {
+  color: #6B4F3A;
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.profile-back a:hover {
+  color: #4A3526;
+}
+
+.profile-header {
+  margin-bottom: 30px;
+}
+
+.profile-header p {
+  margin: 0 0 8px;
+  font-size: 12px;
+  font-weight: 800;
+  letter-spacing: 1.5px;
+  color: #8C7766;
+}
+
+.profile-header h1 {
+  margin: 0 0 8px;
+  font-size: 38px;
+  letter-spacing: -1.5px;
+  color: #4A3526;
+}
+
+.profile-header span {
+  color: #8C7766;
+  font-size: 15px;
+}
+
+/* 프로필 */
+
+.profile-card {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+
+  padding: 30px;
+
+  background: #4A3526;
+  color: #FFFFFF;
+
+  border-radius: 24px;
+
+  box-shadow: 0 15px 40px rgba(74, 53, 38, 0.10);
+
+  margin-bottom: 18px;
+}
+
+.profile-avatar {
+  width: 76px;
+  height: 76px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  flex-shrink: 0;
+
+  background: #FFFFFF;
+  color: #4A3526;
+
+  border-radius: 50%;
+
+  font-size: 32px;
+}
+
+.profile-basic {
+  min-width: 0;
+}
+
+.profile-label {
+  display: block;
+
+  margin-bottom: 5px;
+
+  font-size: 12px;
+  color: #A98F78;
+}
+
+.profile-basic h2 {
+  margin: 0;
+
+  font-size: 25px;
+  letter-spacing: -0.5px;
+}
+
+.profile-basic p {
+  margin: 7px 0 0;
+
+  font-size: 13px;
+  color: #A98F78;
+}
+
+/* 정보 카드 */
+
+.profile-info-card {
+  padding: 28px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #E7DED2;
+  border-radius: 22px;
+
+  margin-bottom: 18px;
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.035);
+}
+
+.profile-card-title {
+  margin-bottom: 22px;
+}
+
+.profile-card-title p {
+  margin: 0 0 6px;
+
+  font-size: 11px;
+  font-weight: 800;
+
+  letter-spacing: 1.4px;
+
+  color: #A98F78;
+}
+
+.profile-card-title h2 {
+  margin: 0;
+
+  font-size: 21px;
+  color: #4A3526;
+
+  letter-spacing: -0.5px;
+}
+
+.profile-info-list {
+  display: flex;
+  flex-direction: column;
+
+  border-top: 1px solid #E7DED2;
+}
+
+.profile-info-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 20px;
+
+  padding: 18px 0;
+
+  border-bottom: 1px solid #E7DED2;
+}
+
+.profile-info-row:last-child {
+  border-bottom: 0;
+}
+
+.profile-info-row span {
+  color: #888;
+  font-size: 14px;
+}
+
+.profile-info-row strong {
+  color: #4A3526;
+  font-size: 14px;
+  word-break: break-all;
+}
+
+/* 취향 */
+
+.profile-taste-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+}
+
+.profile-taste-list span {
+  padding: 9px 14px;
+
+  background: #F2EDE6;
+
+  border-radius: 999px;
+
+  color: #6B4F3A;
+
+  font-size: 13px;
+  font-weight: 600;
+}
+
+.profile-empty-taste {
+  padding: 18px;
+
+  background: #F7F3EC;
+
+  border-radius: 12px;
+
+  color: #888;
+
+  text-align: center;
+
+  font-size: 14px;
+}
+
+/* 버튼 */
+
+.profile-actions {
+  display: flex;
+  justify-content: center;
+
+  margin-top: 28px;
+}
+
+.profile-main-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 48px;
+  padding: 0 22px;
+
+  background: #4A3526;
+  color: #FFFFFF;
+
+  border-radius: 10px;
+
+  text-decoration: none;
+
+  font-size: 14px;
+  font-weight: 700;
+
+  transition:
+    background 0.2s ease,
+    transform 0.2s ease;
+}
+
+.profile-main-button:hover {
+  background: #6B4F3A;
+  transform: translateY(-1px);
+}
+
+/* 로딩 / 오류 */
+
+.profile-loading,
+.profile-error {
+  width: min(760px, 100%);
+
+  margin: 80px auto;
+
+  padding: 50px 20px;
+
+  background: #FFFFFF;
+
+  border: 1px solid #E7DED2;
+  border-radius: 20px;
+
+  text-align: center;
+}
+
+.profile-error h1 {
+  margin: 0 0 10px;
+  font-size: 22px;
+}
+
+.profile-error p {
+  margin: 0 0 20px;
+  color: #8C7766;
+}
+
+.profile-error a {
+  color: #4A3526;
+  font-weight: 700;
+}
+
+/* 모바일 */
+
+@media (max-width: 700px) {
+  .profile-page {
+    padding: 40px 16px 70px;
+  }
+
+  .profile-header h1 {
+    font-size: 31px;
+  }
+
+  .profile-card {
+    padding: 24px;
+  }
+
+  .profile-avatar {
+    width: 62px;
+    height: 62px;
+    font-size: 26px;
+  }
+
+  .profile-basic h2 {
+    font-size: 21px;
+  }
+
+  .profile-info-card {
+    padding: 23px;
+  }
+
+  .profile-info-row {
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 7px;
+  }
+}
