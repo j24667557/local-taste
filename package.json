@@ -1,0 +1,30 @@
+{
+  "name": "local-taste",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "eslint"
+  },
+  "dependencies": {
+    "bcryptjs": "^3.0.3",
+    "dotenv": "^17.4.2",
+    "jsonwebtoken": "^9.0.3",
+    "mongoose": "^9.9.5",
+    "next": "latest",
+    "react": "latest",
+    "react-dom": "latest",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/bcryptjs": "^2.4.6",
+    "@types/jsonwebtoken": "^9.0.10",
+    "@types/node": "^25.9.1",
+    "@types/react": "19.2.18",
+    "eslint": "^9.0.0",
+    "eslint-config-next": "latest",
+    "typescript": "^6.0.3"
+  }
+}
